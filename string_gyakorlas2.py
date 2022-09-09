@@ -64,8 +64,18 @@ def not_bad(s):
 # a-eleje + b-eleje + a-vége + b-vége
 # Például ha a = 'abcd' és b = 'xy', akkor az eredmény 'abxcdy' legyen.
 def front_back(a, b):
-    # TODO...
-    return
+    #PRÓBÁLTAM KÜLÜN FÜGVÉNNYEL MEGOLDANI, HOGY NE KELLJEN 2x UGYANAZ, DE NoneType HIBÁVAL SZENVEDTEM
+    a1=a[:len(a)//2 if len(a)%2==0
+                   else (((len(a)//2))+1)]
+    a2=a[len(a)//2 if len(a)%2==0
+                   else (((len(a)//2))+1):]
+
+    b1=b[:len(b)//2 if len(b)%2==0
+                   else (((len(b)//2))+1)]
+    b2=b[len(b)//2 if len(b)%2==0
+                   else (((len(b)//2))+1):]
+        
+    return a1+b1+a2+b2
 
 
 # Egy egyszerű teszt fv. Kiírja az egyes fv.-ek visszaadott értékét, ill.
