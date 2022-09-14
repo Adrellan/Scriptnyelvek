@@ -47,11 +47,16 @@ def not_bad(s):
     arr = s.split()
     for i, v in enumerate(arr[0:len(arr)-2]):
         if(v=='not' and arr[i+2]=='bad'):
-            arr[i:i+2]='good'
-            #print(v, arr[i+2])
+            del arr[i:i+2]
+            arr[i]='good'
+        elif(v=='not' and arr[i+2][-4:-1]=='bad'):
+            mondatveg = arr[i+2][-1]
+            del arr[i:i+2]
+            arr[i]='good'+mondatveg
+        else:
+            pass
         
     return " ".join(arr)
-
 
 # G. front_back
 # Egy sztringet osszunk két részre, s a két részt nevezzük
