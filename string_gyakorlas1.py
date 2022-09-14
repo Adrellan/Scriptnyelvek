@@ -50,7 +50,8 @@ def donuts(count):
 # sztringet adjunk vissza.
 def both_ends(s):
     if(len(s)>=2):
-        return "{a}{b}{c}{d}".format(a=s[0], b=s[1], c=s[-2], d=s[-1])
+        #return "{a}{b}{c}{d}".format(a=s[0], b=s[1], c=s[-2], d=s[-1])
+        return s[:2] + s[-2:]
     else:
         return ""
 
