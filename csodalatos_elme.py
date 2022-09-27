@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
+from multiprocessing.sharedctypes import Value
 from os import readlink
 
 TEXT="""3Z 4Z UZ3N37 4Z7 4 C3L7 5Z0LG4LJ4, H0GY B3B1Z0NY1754
@@ -13,18 +14,11 @@ L3GY BU5ZK3! C54K K3V35 3MB3R K3P35 3L0LV45N1 3Z7.
 H4 7375Z377, 05ZD M3G M450KK4L 15!"""
 
 def fordito(str):
-    szotar={'3': 'E', '4':'A', '7':'T', '5':'S', '0':'O', '1':'I'}
-    forditott=""
-    for c in str:
-        for n in szotar:
-            if(c==n):
-                forditott+=(szotar[n])
-                break
-            elif(n=='1'):
-                forditott+=c
-                break
+    szotar={'3': 'E', '4':'A', '7':'T', '5':'S', '0':'O', '1':'I'}  
+    for key, value in szotar.items():
+        str = str.replace(key, value)
             
-    return forditott
+    return str
     
 def main(): 
     print(fordito(TEXT))
