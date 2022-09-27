@@ -80,7 +80,7 @@ def word_counter(str):
         else:
             counts[word] = 1
 
-    return dict(sorted(counts.items(), key=lambda item: item[1]))
+    return dict(sorted(counts.items(), key=lambda item: (item[1],item[0])))
 
 def main():
     print(word_counter(TEXT.lower()))
