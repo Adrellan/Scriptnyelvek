@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
+from matplotlib import pyplot as plt
+import numpy as np
+
 """
 Szavak előfordulási gyakorisága
 
@@ -79,6 +82,10 @@ def word_counter(str):
             counts[word] += 1
         else:
             counts[word] = 1
+
+
+    plt.bar(list(counts.keys()), list(counts.values()))
+    plt.show()
 
     return dict(sorted(counts.items(), key=lambda item: (item[1],item[0])))
 
