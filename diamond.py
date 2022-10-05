@@ -1,7 +1,4 @@
 #!/usr/bin/env python3
-from cgi import print_directory
-from string import whitespace
-import sys
 
 def diamond(height):
     star='*'
