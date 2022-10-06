@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
 def mely_magas(word):
+    """
+    A paraméterként felküldött betűket halmazba töltjük, majd a metszetek elemszámával számolva megnézzük a hangrendet
+    """
     s = set()
     magas_hangok={'e', 'é', 'i', 'í', 'ö', 'ő', 'ü', 'ű'}
     mely_hangok={'a', 'á', 'o', 'ó', 'u', 'ú'}
